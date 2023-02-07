@@ -2,4 +2,6 @@
   <li><span></span></li>
   <li routerLink="/listado"><span>Curriculum</span></li>
   <li routerLink="/acercaDe"><span>Acerca De</span></li>
+  <li *ngIf="miToken == 0" class="acceso" routerLink="/login"><span>Login</span></li>
+  <li *ngIf="miToken != 0" class="acceso"><span><strong>Usuario:</strong>{{nombreUsuario}}</span></li>
 </ul>
